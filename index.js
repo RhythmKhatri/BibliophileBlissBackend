@@ -19,6 +19,8 @@ import getReviews from "./APIs/getReviews.js";
 
 const app = express();
 dotenv.config();
+
+const PORT = process.env.PORT || 3001;
 app.use(cors({
   origin: 'http://localhost:3000',
   methods: 'GET,POST,PUT',
