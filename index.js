@@ -22,7 +22,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3001;
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'https://bibliophilebliss.netlify.app'],
   methods: 'GET,POST,PUT',
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -157,6 +157,6 @@ mongoose.connect(database_url).then(() => {
 
 
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
   
 })  
